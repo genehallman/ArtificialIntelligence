@@ -1,15 +1,18 @@
-﻿namespace ArtificialIntelligence.NeuralNetworks
+﻿using ComputeSharp;
+
+namespace ArtificialIntelligence.NeuralNetworks
 {
-    public class Tensor
+    public abstract class Tensor
     {
-        public int[] Size { get; private set; }
+    }
 
-        public Tensor(params int[] sizes)
+    public class Tensor<T> : Tensor where T : unmanaged
+    {
+        public ReadWriteBuffer<T>? Buffer { get; set; } = null;
+        
+        public Tensor()
         {
-            Size = sizes;
         }
-
-        public dynamic this[params int[] indexes] { get => null; set { } }
     }
 
 }

@@ -13,4 +13,10 @@
     <PackageReference Include="ComputeSharp.Dynamic" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ComputeShaders\Movement\" />
+    <Folder Include="ComputeShaders\Load\" />
+    <Folder Include="ComputeShaders\Ternary\" />
+  </ItemGroup>
+
 </Project>
